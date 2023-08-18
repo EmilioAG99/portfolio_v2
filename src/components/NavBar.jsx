@@ -1,8 +1,10 @@
 import "./navbar.css";
 import { useState } from "react";
 import logo from "../Assets/logo.png";
+import { GiHamburgerMenu } from "react-icons/gi";
 export default function NavBar() {
   const [active, setActive] = useState("about");
+  const [openMenu, setOpenMenu] = useState(false);
   const changeAboutView = (e) => {
     e.preventDefault();
     setActive("about");
@@ -21,7 +23,13 @@ export default function NavBar() {
             <img src={logo} alt="logo" className="img-header" />
           </a>
         </div>
-        <div className="links">
+        <GiHamburgerMenu
+          className="hambruger__menu"
+          onClick={() => {
+            setOpenMenu(!openMenu);
+          }}
+        />
+        <div className={openMenu ? "links" : "links display"}>
           <a
             href="#about"
             className={active === "about" ? "active" : ""}
