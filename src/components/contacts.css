@@ -47,6 +47,10 @@ form {
   gap: 1.2rem;
 }
 
+form button{
+  align-self:center;
+}
+
 input,
 textarea {
   padding: 1.5rem;
