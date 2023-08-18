@@ -1,6 +1,6 @@
 import "./navbar.css";
 import { useState } from "react";
-import logo from "../Assets/logo.png";
+import logo from "/assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 export default function NavBar() {
   const [active, setActive] = useState("about");

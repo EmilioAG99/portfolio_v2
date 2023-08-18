@@ -1,4 +1,4 @@
-import CV from "../Assets/Luis_Alcantara_CV.pdf";
+import CV from "/assets/Luis_Alcantara_CV.pdf";
 export default function CTA() {
   return (
     <div className="cta">

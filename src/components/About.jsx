@@ -1,6 +1,6 @@
 import "./about.css";
 import CTA from "./CTA";
-import me from "../Assets/me.png";
+import me from "/assets/me.png";
 export default function About() {
   return (
     <section id="about" className="about">
