@@ -1,0 +1,54 @@
+.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.details {
+  max-width: 80ch;
+  font-size: 17px;
+}
+
+.technologies {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 3rem;
+  width: 100%;
+}
+.card {
+  width: 100%;
+}
+
+.services-card {
+  width: 100%;
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to right, darkblue, var(--color-primary)) 1;
+  padding: 1px;
+  border-radius: 20px;
+}
+
+.moving-div {
+  border-radius: 20px;
+  padding: 1rem 2.5rem;
+  min-height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.icons {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 560px) {
+  .technologies {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .details {
+    line-height: 1.5;
+  }
+}
