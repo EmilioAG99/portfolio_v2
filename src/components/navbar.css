@@ -35,7 +35,8 @@ a {
   align-items: center;
   gap: 1rem;
 }
-.hambruger__menu {
+.hamburger__menu,
+.close__menu {
   display: none;
 }
 @keyframes slide-down {
@@ -87,8 +88,8 @@ a {
   .hamburger__menu {
     display: inline;
     position: absolute;
-    top: 15px;
-    left: 20px;
+    top: 20px;
+    left: 25px;
     font-size: 20px;
     cursor: pointer;
     animation: slide-left 0.7s ease-in;
@@ -96,9 +97,10 @@ a {
   .close__menu {
     display: inline;
     position: absolute;
-    top: 15px;
-    left: 20px;
+    top: 20px;
+    left: 25px;
     font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
     animation: slide-right 0.7s ease-in;
   }
