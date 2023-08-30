@@ -11,7 +11,7 @@ export const experience = [
     company: "Harvestly.co",
     title: "Web developer",
     icon: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.K-4RqDC6zFrpAG31ayDDOgHaHa%26pid%3DApi&f=1&ipt=959450950849108b77096bdce115f635fc5082b0e66062fbb46dfda43a57fc82&ipo=images",
-    date: "July 2021 - November 2021",
+    date: "July 2021 - December 2021",
     iconBg: "#383E56",
     responsabilities: ["Frontend development", "React", "CSS styling"],
   },

@@ -38,6 +38,14 @@ a {
 .hambruger__menu {
   display: none;
 }
+@keyframes slide-down {
+  from {
+    transform: translateY(-25px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 
 @media (max-width: 690px) {
   .navigation {
@@ -45,14 +53,18 @@ a {
     align-items: center;
     justify-content: center;
     padding-top: 1rem;
+    animation: slide 2s;
   }
+  /* add animation to get add a smooth opening effect to the navigation bar in small devices */
   .links {
     margin-right: 1.5rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    animation: slide-down 1.2s ease-in;
   }
   .display {
     display: none;

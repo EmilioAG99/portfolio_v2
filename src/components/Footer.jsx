@@ -1,6 +1,8 @@
-import "./footer.css";
 import { GrLinkedinOption } from "react-icons/gr";
 import { AiFillGithub } from "react-icons/ai";
+
+import "./footer.css";
+
 export default function Footer() {
   return (
     <footer className="footer__section">

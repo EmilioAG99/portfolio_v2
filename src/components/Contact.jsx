@@ -1,12 +1,12 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsWhatsapp } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
+import Notification from "./Notification";
 import "./contacts.css";
 function Contacts() {
   const form = useRef();
   const sendMail = (e) => {
-    console.log("hola");
     e.preventDefault();
     emailjs.sendForm(
       "service_wcvym9i",
@@ -14,7 +14,18 @@ function Contacts() {
       form.current,
       "Ik2_SlA7qvBJQ7FIZ"
     );
+    handleShowNotification();
     e.target.reset();
+  };
+
+  const [showNotification, setShowNotification] = useState(false);
+
+  const handleShowNotification = () => {
+    setShowNotification(true);
+  };
+
+  const handleCloseNotification = () => {
+    setShowNotification(false);
   };
   return (
     <section id="contact">
@@ -43,6 +54,12 @@ function Contacts() {
             </a>
           </article>
         </div>
+        {showNotification && (
+          <Notification
+            message="Your message has been sent"
+            onClose={handleCloseNotification}
+          />
+        )}
         <form onSubmit={sendMail} ref={form}>
           <input type="text" name="name" placeholder="Your name" required />
           <input type="email" name="email" placeholder="Your email" required />

@@ -14,7 +14,16 @@ const ProjectCard = ({ project }) => {
           return <li key={index} className="tag">{`#${tag}`}</li>;
         })}
       </ul>
-      <button className="btn btn_secondary git">Github</button>
+      <button className="btn btn_secondary git">
+        <a
+          href={project.repo}
+          target="_blank"
+          rel="noreferrer"
+          className="button__text"
+        >
+          Github
+        </a>
+      </button>
     </div>
   );
 };

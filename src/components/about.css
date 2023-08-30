@@ -36,3 +36,9 @@
 .name {
   font-weight: bold;
 }
+
+@media (max-width: 690px) {
+  .about {
+    padding-top: 1rem;
+  }
+}
