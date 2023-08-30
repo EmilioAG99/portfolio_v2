@@ -40,10 +40,26 @@ a {
 }
 @keyframes slide-down {
   from {
-    transform: translateY(-25px);
+    transform: translateY(-15px);
   }
   to {
     transform: translateY(0);
+  }
+}
+@keyframes slide-right {
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-left {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
@@ -53,7 +69,6 @@ a {
     align-items: center;
     justify-content: center;
     padding-top: 1rem;
-    animation: slide 2s;
   }
   /* add animation to get add a smooth opening effect to the navigation bar in small devices */
   .links {
@@ -64,18 +79,28 @@ a {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    animation: slide-down 1.2s ease-in;
+    animation: slide-down 0.7s ease-in;
   }
   .display {
     display: none;
   }
-  .hambruger__menu {
+  .hamburger__menu {
     display: inline;
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 20px;
     font-size: 20px;
     cursor: pointer;
+    animation: slide-left 0.7s ease-in;
+  }
+  .close__menu {
+    display: inline;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    animation: slide-right 0.7s ease-in;
   }
   .logo {
     display: none;

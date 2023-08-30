@@ -2,6 +2,7 @@ import "./navbar.css";
 import { useState } from "react";
 import logo from "/assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
 export default function NavBar() {
   const [active, setActive] = useState("about");
   const [openMenu, setOpenMenu] = useState(false);
@@ -23,12 +24,22 @@ export default function NavBar() {
             <img src={logo} alt="logo" className="img-header" />
           </a>
         </div>
-        <GiHamburgerMenu
-          className="hambruger__menu"
-          onClick={() => {
-            setOpenMenu(!openMenu);
-          }}
-        />
+        {openMenu ? (
+          <AiOutlineClose
+            className="close__menu"
+            onClick={() => {
+              setOpenMenu(!openMenu);
+            }}
+          />
+        ) : (
+          <GiHamburgerMenu
+            className="hamburger__menu"
+            onClick={() => {
+              setOpenMenu(!openMenu);
+            }}
+          />
+        )}
+
         <div className={openMenu ? "links" : "links display"}>
           <a
             href="#about"
