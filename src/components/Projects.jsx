@@ -2,28 +2,24 @@
 import "./projects.css";
 import { projects } from "../data/projects";
 const ProjectCard = ({ project }) => {
+  const { live, repo, desc, name, image } = project;
   return (
-    <div className="card__project">
-      <picture className="image__container">
-        <img src={project.image} alt={project.name} className="image" />
-      </picture>
-      <p className="project__title">{project.name}</p>
-      <p className="project__description">{project.desc}</p>
-      <ul className="tag__list">
-        {project.tags.map((tag, index) => {
-          return <li key={index} className="tag">{`#${tag}`}</li>;
-        })}
-      </ul>
-      <button className="btn btn_secondary git">
-        <a
-          href={project.repo}
-          target="_blank"
-          rel="noreferrer"
-          className="button__text"
-        >
-          Github
-        </a>
-      </button>
+    <div className="project-card">
+      <img src={image} alt={name} className="project-image" />
+      <div className="project-info">
+        <h3>{name}</h3>
+        <p>{desc}</p>
+        <div className="project-links">
+          <a href={repo} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          {live && (
+            <a href={live} target="_blank" rel="noopener noreferrer">
+              Live
+            </a>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

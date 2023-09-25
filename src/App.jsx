@@ -6,6 +6,7 @@ import Projects from "./components/Projects.jsx";
 import Experience from "./components/Experience.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import GoBack from "./components/GoBack.jsx";
 import "./App.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <GoBack />
     </>
   );
 }
